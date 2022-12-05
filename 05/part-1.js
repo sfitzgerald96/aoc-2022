@@ -14,7 +14,7 @@ function main() {
     }
   })
   crates.forEach(crate => {
-    process.stdout.write(`${crate.slice(-1)[0]} `)
+    process.stdout.write(crate.slice(-1)[0])
   })
 }
 
@@ -24,8 +24,8 @@ function parseCrates(rawCrateInput) {
     .replaceAll(']', ' ')
     .split('\n')
     .slice(0, -1)
-    .map(el => el + ' ') // add an extra space so regex will match last item  
     .map(el => {
+      el = el + ' ' // add an extra space so regex will match last item
       return el
         .match(/.{4}/g)
         .map(el2 => el2.trim())
@@ -40,11 +40,7 @@ function parseCrates(rawCrateInput) {
   rawArray.reverse().forEach((nestedArray, j) => {
     nestedArray.forEach((el, i) => {
       if (el !== '') {
-        try {
-          arrayOfStacks[i].push(el)
-        } catch (error) {
-          throw error
-        }
+        arrayOfStacks[i].push(el)
       }
     })
   })
