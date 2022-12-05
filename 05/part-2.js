@@ -9,7 +9,7 @@ function main() {
     srcStackId--
     destStackId--
 
-    poppedItems = crates[srcStackId].splice(-numToMove, numToMove)
+    let poppedItems = crates[srcStackId].splice(-numToMove, numToMove)
     crates[destStackId] = crates[destStackId].concat(poppedItems)
   })
   crates.forEach(crate => {
