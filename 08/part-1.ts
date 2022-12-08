@@ -19,7 +19,7 @@ const solution = (): number => {
   return visibleTrees
 }
 
-function visibleOnAxis(trees: number[], i: number): Boolean {
+const visibleOnAxis = (trees: number[], i: number): Boolean => {
   let currentTree = trees[i]
   let numTreesBefore = i
   let numTreesAfter = trees.length - i - 1

@@ -19,7 +19,7 @@ const solution = (): number => {
   return highestScore
 }
 
-function calculateScoreForAxis(trees: number[], i: number): number {
+const calculateScoreForAxis = (trees: number[], i: number): number => {
   let currentTree = trees[i]
   let firstPart = trees.slice(0, i).reverse()
   let firstPartTreeScore = 0
