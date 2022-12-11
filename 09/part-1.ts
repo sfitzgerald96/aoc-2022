@@ -1,10 +1,4 @@
-import fs, { Dir } from 'fs'
-import * as readline from 'readline'
-
-let rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-})
+import fs from 'fs'
 
 const solution = () => {
   const instructions = fs.readFileSync('./09/input.txt', 'utf-8').split('\n')
